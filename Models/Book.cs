@@ -6,7 +6,7 @@ namespace Frisan_Ionut_Lab2.Models
 {
     public class Book
     {
-        public int Id { get; set; }
+        public int ID { get; set; }
 
         [Display(Name = "Book Title")]
         public string Title { get; set; }
@@ -22,5 +22,6 @@ namespace Frisan_Ionut_Lab2.Models
 
         public int? AuthorId { get; set; }
         public Author? Author { get; set; }
+        public ICollection<BookCategory>? BookCategories { get; set; }
     }
 }
