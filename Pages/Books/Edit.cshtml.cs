@@ -8,9 +8,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Frisan_Ionut_Lab2.Data;
 using Frisan_Ionut_Lab2.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Frisan_Ionut_Lab2.Pages.Books
 {
+    [Authorize(Roles = "Admin")]
     public class EditModel : BookCategoriesPageModel
     {
         private readonly Frisan_Ionut_Lab2.Data.Frisan_Ionut_Lab2Context _context;

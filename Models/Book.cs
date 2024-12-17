@@ -9,9 +9,13 @@ namespace Frisan_Ionut_Lab2.Models
         public int ID { get; set; }
 
         [Display(Name = "Book Title")]
+        [Required]
+        [MinLength(3)]
+        [MaxLength(150)]
         public string Title { get; set; }
 
         [Column(TypeName = "decimal(6,2)")]
+        [Range(0.01, 500)]
         public decimal Price { get; set; }
 
         [DataType(DataType.Date)]
